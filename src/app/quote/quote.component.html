@@ -1,0 +1,25 @@
+<div class="jumbotron">
+    <h1>Quotes</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
+        </div>
+        <div class="col">
+            <div *ngFor='let quote of quotes; let i=index'>
+                <p id="{{i}}">{{quote.quote}}</p>
+                <p><strong>Author:</strong> {{quote.author}}</p>
+                <p><strong>Posted on:</strong> {{quote.datePosted|date}}</p>
+                <button (click)='toogleDetails(i)'>Toogle Details</button>
+
+                <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='delQuote($event,i)'>
+                </app-quote-details>
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
