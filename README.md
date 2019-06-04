@@ -14,6 +14,7 @@ This is an app that allows one to create quotes, like and dislike and even delet
 ## BDD
 
 | Behaviour	                  | Input	                | Output                    |
+|-----------------------------|-------------------------|---------------------------|
 | User types their quote	  | The quote               | Quote,Author and Submiter |
 | The user likes their quote  | Clicks the like button  | The like is reflected     |
 | The user dislikes the quote | Clicks  dislike button  | The dislike is reflected  |
